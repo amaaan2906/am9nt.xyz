@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>am9nt - About</title>
+  <link rel="stylesheet/less" type="text/css" href="style.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="light">
+  <main id="layout-2">
+    <a href="/" class="title">Aman Tawakley</a>
+    <nav class="links">
+      <a id="active" aria-disabled="true">About</a>
+      <a href="/projects">Projects</a>
+    </nav>
+    <div class="content">
+      <section id="whoami">
+        <div class="heading">whoami</div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae blanditiis dolores expedita
+          doloribus,
+          perferendis sit similique iure laborum deleniti id voluptate porro nesciunt. Corrupti nobis itaque at. Odio,
+          culpa autem?</p>
+      </section>
+      <section class="resume">
+        <div class="heading">Resume</div>
+        <p>Click for a copy:</p>
+        <a href="/file/resume" download="Resume" id="resume-dl">
+          View
+        </a>
+      </section>
+    </div>
+  </main>
+  <footer>&copy; 2021-<span id="year"></span>
+    <br>
+    Lorem ipsum dolor sit amet.
+  </footer>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

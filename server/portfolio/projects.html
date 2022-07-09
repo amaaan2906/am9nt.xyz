@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>am9nt - Projects</title>
+  <link rel="stylesheet/less" type="text/css" href="style.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="light">
+  <main id="layout-2">
+    <a href="/" class="title">Aman Tawakley</a>
+    <nav class="links">
+      <a href="/about">About</a>
+      <a id="active" aria-disabled="true">Projects</a>
+    </nav>
+    <div class="content">
+    </div>
+  </main>
+  <footer>&copy; 2021-<span id="year"></span>
+    <br>
+    Lorem ipsum dolor sit amet.
+  </footer>
+  <script defer async>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    window.onload = () => {
+      fetch('/api/project-list')
+        .then(res => res.json())
+        .then(data => {
+          const content = document.querySelector('.content')
+          data.projects.map((project, index) => {
+            console.log(project)
+
+            const section = document.createElement('section')
+            section.classList.add('project')
+
+            // Project section header
+            const head = document.createElement('div')
+            head.classList.add('p-head')
+
+            const title = document.createElement('span')
+            title.classList.add('p-title', project.progress)
+            title.innerHTML = `${index + 1}. ${project.name}`
+            if (project.progress === "dev")
+              title.setAttribute('title', 'In development')
+            else if (project.progress === "plan")
+              title.setAttribute('title', 'Planning stage')
+            else if (project.progress === "prod")
+              title.setAttribute('title', 'Build available')
+            else if (project.progress === "dep")
+              title.setAttribute('title', 'No longer maintained')
+            head.appendChild(title)
+
+            const upDate = document.createElement('span')
+            upDate.classList.add('p-update')
+            upDate.setAttribute('title', 'Last Updated')
+            upDate.innerHTML = project['last-commit']
+            head.appendChild(upDate)
+
+            section.appendChild(head)
+            section.appendChild(document.createElement('br'))
+
+            const desc = document.createElement('span')
+            desc.classList.add('p-desc')
+            desc.innerHTML = `${project.description.trim()}`
+            section.appendChild(desc)
+
+            const buttons = document.createElement('div')
+            buttons.classList.add('p-btns')
+            if (project.git.exist) {
+              const git = document.createElement('a')
+              git.classList.add('git')
+              git.innerHTML = `Git Repo`
+              git.setAttribute('href', project.git.link)
+              git.setAttribute('target', '__blank')
+              buttons.appendChild(git)
+            }
+            if (project.demo.exist) {
+              const demo = document.createElement('a')
+              demo.classList.add('demo')
+              demo.innerHTML = `Live build`
+              demo.setAttribute('href', project.demo.link)
+              if (project.demo.tab)
+                demo.setAttribute('target', '__blank')
+              buttons.appendChild(demo)
+            }
+
+            section.appendChild(buttons)
+
+            content.appendChild(section)
+          })
+        })
+    }
+    // function getProjects() {
+      // }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+	"name": "am9nt.xyz",
+	"version": "1.0.0",
+	"description": "portfolio webpage",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon server/index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Aman Tawakley",
+	"devDependencies": {
+		"nodemon": "^2.0.19"
+	},
+	"dependencies": {
+		"cookie-parser": "^1.4.6",
+		"dotenv": "^16.0.1",
+		"express": "^4.18.1",
+		"helmet": "^5.1.0",
+		"morgan": "^1.10.0",
+		"path": "^0.12.7"
+	}
+}

@@ -1,0 +1,64 @@
+{
+	"schema": {
+		"name": "project name/title",
+		"description": "short description of the project",
+		"last-commit": "if build avalable: date of last commit on master. else: leave blank",
+		"progress": "stage of project. plan(light orange)=planning stage -> dev(blue)=in development -> prod(green)=build available -> dep(red)=not maintained",
+		"git": {
+			"exist": "boolean value if exists",
+			"link": "link if exists"
+		},
+		"demo": {
+			"exist": "boolean value if exists",
+			"link": "link if exists",
+			"tab": "boolean value if demo is deployed separate"
+		}
+	},
+	"projects": [
+		{
+			"name": "Authentication server",
+			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque?",
+			"last-commit": "January 20, 2021",
+			"progress": "prod",
+			"git": {
+				"exist": true,
+				"link": "https://github.com/amaaan2906/jwt-auth"
+			},
+			"demo": {
+				"exist": false,
+				"link": "#",
+				"tab": false
+			}
+		},
+		{
+			"name": "URL Shortener",
+			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus.    ",
+			"last-commit": "January 6, 2021",
+			"progress": "dev",
+			"git": {
+				"exist": true,
+				"link": "https://github.com/amaaan2906/url"
+			},
+			"demo": {
+				"exist": true,
+				"link": "/project/url",
+				"tab": false
+			}
+		},
+		{
+			"name": "MapPic",
+			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus.    ",
+			"last-commit": "March 10, 2020",
+			"progress": "dep",
+			"git": {
+				"exist": false,
+				"link": "https://github.com/amaaan2906/mapic"
+			},
+			"demo": {
+				"exist": true,
+				"link": "https://github.com/PersoSirEduard/Mapic-no-credentials",
+				"tab": true
+			}
+		}
+	]
+}

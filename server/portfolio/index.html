@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>am9nt</title>
+  <link rel="stylesheet/less" type="text/css" href="style.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
+</head>
+
+<body class="light">
+  <main id="layout-1">
+    <div class="title">Aman Tawakley</div>
+    <nav class="links">
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+    </nav>
+  </main>
+  <footer>&copy; 2021-<span id="year"></span>
+    <br>
+    Lorem ipsum dolor sit amet.
+  </footer>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>am9nt - Contact</title>
+  <link rel="stylesheet/less" type="text/css" href="style.less" />
+  <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
+</head>
+
+<body>
+  <main id="layout-2">
+    <a href="/" class="title">Aman Tawakley</a>
+    <nav class="links">
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+      <a id="active" aria-disabled="true">Contact</a>
+    </nav>
+    <div class="content">
+      <section id="form">
+        <form id="contact-form" autocomplete="off">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" autofocus required autocomplete="false">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required autocomplete="false">
+          <label for="message">Message:</label>
+          <textarea name="message" id="message" required></textarea>
+          <button id="form-submit" type="submit">Send</button>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer>&copy; 2021-<span id="year"></span>
+    <br>
+    Lorem ipsum dolor sit amet.
+  </footer>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+    const cf = document.getElementById("contact-form")
+    cf.addEventListener('submit', (e) => {
+      e.preventDefault();
+      fetch("/api/contact-form", {
+        method: "post",
+        body: JSON.stringify({
+          "name": e.target.elements.name.value,
+          "email": e.target.elements.email.value,
+          "message": e.target.elements.message.value
+        }),
+        headers: {
+          'Content-type': 'application/json'
+        }
+      }).then(res => {
+        if (res.status == 200) cf.reset()
+      })
+    })
+  </script>
+</body>
+
+</html>
