@@ -22,6 +22,11 @@ app.use(
 	})
 )
 
+// Health endpoint
+app.get("/health", (req, res) => {
+	res.sendStatus(200)
+})
+
 // Base portfolio url redirects
 app.use(
 	"/",
