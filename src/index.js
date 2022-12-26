@@ -6,10 +6,11 @@ import { fileURLToPath } from "url"
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
+const __root = path.resolve()
 
 const app = express()
 dotenv.config({
-	path: "server/.env",
+	path: "src/.env",
 })
 
 // Middlewares
@@ -21,7 +22,7 @@ app.use(
 	})
 )
 
-// Base url redirects
+// Base portfolio url redirects
 app.use(
 	"/",
 	express.static(path.join(__dirname, "portfolio"), {
@@ -31,7 +32,7 @@ app.use(
 
 // API data endpoints
 app.get("/api/project-list", (req, res) => {
-	res.sendFile(path.join(__dirname, "data", "projects.json"))
+	res.sendFile(path.join(__root, "data", "projects.json"))
 })
 
 app.post("/api/contact-form", (req, res) => {
@@ -41,18 +42,20 @@ app.post("/api/contact-form", (req, res) => {
 
 // File download endpoints
 app.get("/file/resume", (req, res) => {
-	res.download(path.join(__dirname, "data", "Aman Tawakley cs.pdf"))
+	res.download(path.join(__root, "data", "Aman Tawakley cs.pdf"))
 })
 
 // Register demo app urls
-import demoUrls from "./data/demo.js"
+// TODO: need to plan integration techniques
+// import demoUrls from "../data/demo.js"
 
-demoUrls.demos.map((a) => {
-	app.get(`/project/${a.baseUrl}`, (req, res) => {
-		res.send(a.buildPath)
-	})
-})
+// demoUrls.demos.map((a) => {
+// 	app.get(`/project/${a.baseUrl}`, (req, res) => {
+// 		res.send(a.buildPath)
+// 	})
+// })
 
+// Error handlers
 app.use((req, res, next) => {
 	res.status(404)
 	const error = new Error(`- Not Found - ${req.originalUrl}`)

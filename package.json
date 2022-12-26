@@ -4,8 +4,12 @@
 	"description": "portfolio webpage",
 	"type": "module",
 	"main": "index.js",
+	"exports": {
+		"root/": "./",
+		"src/": "./src"
+	},
 	"scripts": {
-		"dev": "nodemon server/index.js",
+		"dev": "nodemon src/index.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "Aman Tawakley",

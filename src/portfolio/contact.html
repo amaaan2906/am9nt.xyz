@@ -35,6 +35,7 @@
   <footer>&copy; 2021-<span id="year"></span>
     <br>
     Lorem ipsum dolor sit amet.
+    <button class="theme-toggle">moon</button>
   </footer>
   <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
@@ -54,6 +55,11 @@
       }).then(res => {
         if (res.status == 200) cf.reset()
       })
+    })
+
+    const tt = document.querySelector(".theme-toggle");
+    tt.addEventListener('click', () => {
+      document.querySelector("body").classList.toggle("light")
     })
   </script>
 </body>

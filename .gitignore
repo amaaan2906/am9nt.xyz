@@ -1,5 +1,4 @@
 # Build folders
-projects/
 dist/
 
 # Environemt files
@@ -9,6 +8,7 @@ dist/
 
 # sensitive data
 *.pdf
+demo.*
 
 # npm
 .DS_Store
