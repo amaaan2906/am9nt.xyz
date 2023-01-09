@@ -16,10 +16,10 @@
 	},
 	"projects": [
 		{
-			"name": "Authentication server",
+			"name": "gpu project",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque?",
-			"last-commit": "January 20, 2021",
-			"progress": "prod",
+			"last-commit": "January 1, 2023",
+			"progress": "plan",
 			"git": {
 				"exist": true,
 				"link": "https://github.com/amaaan2906/jwt-auth"
@@ -31,10 +31,70 @@
 			}
 		},
 		{
-			"name": "URL Shortener",
+			"name": "Hospital database management system",
+			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque?",
+			"last-commit": "November 27, 2022",
+			"progress": "prod",
+			"git": {
+				"exist": true,
+				"link": "https://github.com/amaaan2906/"
+			},
+			"demo": {
+				"exist": false,
+				"link": "#",
+				"tab": false
+			}
+		},
+		{
+			"name": "image project",
+			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque?",
+			"last-commit": "January 1, 2023",
+			"progress": "dev",
+			"git": {
+				"exist": true,
+				"link": "https://github.com/amaaan2906/jwt-auth"
+			},
+			"demo": {
+				"exist": false,
+				"link": "#",
+				"tab": false
+			}
+		},
+		{
+			"name": "10mans web app",
+			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque?",
+			"last-commit": "January 1, 2023",
+			"progress": "plan",
+			"git": {
+				"exist": true,
+				"link": "https://github.com/amaaan2906/"
+			},
+			"demo": {
+				"exist": false,
+				"link": "#",
+				"tab": false
+			}
+		},
+		{
+			"name": "jwt server",
+			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque?",
+			"last-commit": "January 20, 2021",
+			"progress": "dev",
+			"git": {
+				"exist": true,
+				"link": "https://github.com/amaaan2906/jwt-auth"
+			},
+			"demo": {
+				"exist": false,
+				"link": "#",
+				"tab": false
+			}
+		},
+		{
+			"name": "short url Project",
 			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus.    ",
 			"last-commit": "January 6, 2021",
-			"progress": "dev",
+			"progress": "prod",
 			"git": {
 				"exist": true,
 				"link": "https://github.com/amaaan2906/url"
@@ -42,6 +102,21 @@
 			"demo": {
 				"exist": false,
 				"link": "/project/url",
+				"tab": false
+			}
+		},
+		{
+			"name": "movie webpage",
+			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque?",
+			"last-commit": "January 1, 2023",
+			"progress": "plan",
+			"git": {
+				"exist": true,
+				"link": "https://github.com/amaaan2906/"
+			},
+			"demo": {
+				"exist": false,
+				"link": "#",
 				"tab": false
 			}
 		},
