@@ -117,6 +117,11 @@ body {
 				font-weight: bold;
 				margin-bottom: 0.5rem;
 			}
+			/* custom scrollbar */
+			&::-webkit-scrollbar {
+				display: none;
+			}
+			scrollbar-color: transparent transparent;
 		}
 
 		.links {
@@ -171,10 +176,11 @@ body {
 			margin: 0.5rem 0;
 			padding: 0.5rem 1rem;
 			transition: color 200ms ease-in-out, background-color 250ms ease-in-out;
-		}
-		#resume-dl:hover {
-			color: var(--main);
-			background-color: var(--accent);
+
+			&:hover {
+				color: var(--main);
+				background-color: var(--accent);
+			}
 		}
 
 		#form {
@@ -213,10 +219,11 @@ body {
 				margin: 0.5rem 0;
 				padding: 0.5rem 1rem;
 				transition: color 200ms ease-in-out, background-color 250ms ease-in-out;
-			}
-			#form-submit:hover {
-				color: var(--main);
-				background-color: var(--light);
+
+				&:hover {
+					color: var(--main);
+					background-color: var(--light);
+				}
 			}
 		}
 
@@ -260,10 +267,11 @@ body {
 					padding: 0.5rem 1rem;
 					transition: color 200ms ease-in-out,
 						background-color 250ms ease-in-out;
-				}
-				a:hover {
-					color: var(--main);
-					background-color: var(--accent);
+
+					&:hover {
+						color: var(--main);
+						background-color: var(--accent);
+					}
 				}
 			}
 		}
