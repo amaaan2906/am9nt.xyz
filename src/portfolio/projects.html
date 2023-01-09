@@ -25,16 +25,17 @@
     <br>
     Lorem ipsum dolor sit amet.
   </footer>
-  <script defer async>
+  <script>
     document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+  <script defer async>
+    // Populate project list
     window.onload = () => {
       fetch('/api/project-list')
         .then(res => res.json())
         .then(data => {
           const content = document.querySelector('.content')
           data.projects.map((project, index) => {
-            console.log(project)
-
             const section = document.createElement('section')
             section.classList.add('project')
 
