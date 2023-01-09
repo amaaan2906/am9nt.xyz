@@ -47,7 +47,8 @@ app.post("/api/contact-form", (req, res) => {
 
 // File download endpoints
 app.get("/file/resume", (req, res) => {
-	res.download(path.join(__root, "data", "Aman Tawakley cs.pdf"))
+	// res.download(path.join(__root, "data", "Aman Tawakley cs.pdf"))
+	res.sendFile(path.join(__root, "data", "Aman Tawakley cs.pdf"))
 })
 
 // Register demo app urls
