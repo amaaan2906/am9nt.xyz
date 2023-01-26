@@ -16,13 +16,43 @@
 	},
 	"projects": [
 		{
-			"name": "gpu project",
-			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque?",
-			"last-commit": "January 1, 2023",
-			"progress": "plan",
+			"name": "JWT Authentication Service",
+			"description": "Deployed a Node.js server that utilizes JSON Web Tokens to handle the creation, validation, and decoding of secure, self-contained tokens that are used for authentication and authorization. The microservice uses safety measures to defend against common security threats and data validation to ensure that only valid data is accepted and processed. It functions as a reliable and secure authentication system that can be easily integrated into other web applications or APIs.",
+			"last-commit": "January 12, 2023",
+			"progress": "prod",
 			"git": {
 				"exist": true,
 				"link": "https://github.com/amaaan2906/jwt-auth"
+			},
+			"demo": {
+				"exist": false,
+				"link": "#",
+				"tab": false
+			}
+		},
+		{
+			"name": "URL shortener",
+			"description": "A lightweight, isolated Node.js microservice built using TypeScript and the Express.js framework that generates short and neat URLs. The service is available to the public via an API to generate random short URLs and is continually being updated to add new features like analytics, user-defined short URLs, password-protected short URLs, etc. while also making sure it continues to be reliable, scalable and effective for its users.",
+			"last-commit": "January 24, 2023",
+			"progress": "prod",
+			"git": {
+				"exist": true,
+				"link": "https://github.com/amaaan2906/micro-url"
+			},
+			"demo": {
+				"exist": false,
+				"link": "https://micro-url.onrender.com/",
+				"tab": true
+			}
+		},
+		{
+			"name": "GPU Price Scrapper",
+			"description": "A CRON job that is scheduled to run on a Node.js server on a daily basis at fixed time. The job fetches GPU prices from popular retailer online stores and saves them to a MySQL database. The database is controlled using Prisma ORM. The script also makes use of libraries such as node-html-parser and axios to retrieve and parse the scraped data. It also incorporates error handling mechanisms, logging, and monitoring to ensure that everything runs seamlessly and without disruptions. It was designed to retrieve the latest prices on a daily basis, making it useful for monitoring and analyzing price trends, and making informed purchasing decisions.",
+			"last-commit": "January 25, 2023",
+			"progress": "dev",
+			"git": {
+				"exist": true,
+				"link": "https://github.com/amaaan2906/gpu-price"
 			},
 			"demo": {
 				"exist": false,
@@ -32,12 +62,12 @@
 		},
 		{
 			"name": "Hospital database management system",
-			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque?",
+			"description": "As part of a course, I built a PHP web application that connected to a MySQL database. The app was designed to manage and visualise data about hospitals, doctors, patients, and their relationships. The application has a user-friendly interface that allows users to easily view and manage data. This project provided me with a fantastic opportunity to put my PHP and MySQL skills to use and create a real-world application.",
 			"last-commit": "November 27, 2022",
 			"progress": "prod",
 			"git": {
 				"exist": true,
-				"link": "https://github.com/amaaan2906/"
+				"link": "https://github.com/amaaan2906/php-hospital-dbm"
 			},
 			"demo": {
 				"exist": false,
@@ -46,12 +76,12 @@
 			}
 		},
 		{
-			"name": "image project",
-			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque?",
-			"last-commit": "January 1, 2023",
-			"progress": "dev",
+			"name": "Aperture",
+			"description": "Full-stack photo sharing platform to-be developed using Deno. Will initially serve as a learning experience into Deno and Fresh frameworks but will evolve to be a standalone full-stack application",
+			"last-commit": "",
+			"progress": "plan",
 			"git": {
-				"exist": true,
+				"exist": false,
 				"link": "https://github.com/amaaan2906/jwt-auth"
 			},
 			"demo": {
@@ -61,8 +91,25 @@
 			}
 		},
 		{
-			"name": "10mans web app",
-			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque?",
+			"name": "MapPic",
+			"description": "At a hackathon, I was part of a team that created a MEVN stack web application that allows users to find and mark new locations for photographic spots around town, leveraging Google Cloud Vision API for image recognition and tagging and Vue.js for a modular front-end design, resulting in a user-friendly and efficient tool.",
+			"last-commit": "March 10, 2020",
+			"progress": "dep",
+			"git": {
+				"exist": true,
+				"link": "https://github.com/PersoSirEduard/Mapic-no-credentials"
+			},
+			"demo": {
+				"exist": false,
+				"link": "https://github.com/PersoSirEduard/Mapic-no-credentials",
+				"tab": true
+			}
+		}
+	],
+	"extra": [
+		{
+			"name": "ValTMs",
+			"description": "Online hub to organize and track professional level Valorant custom games.",
 			"last-commit": "January 1, 2023",
 			"progress": "plan",
 			"git": {
@@ -72,36 +119,6 @@
 			"demo": {
 				"exist": false,
 				"link": "#",
-				"tab": false
-			}
-		},
-		{
-			"name": "jwt server",
-			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque?",
-			"last-commit": "January 20, 2021",
-			"progress": "dev",
-			"git": {
-				"exist": true,
-				"link": "https://github.com/amaaan2906/jwt-auth"
-			},
-			"demo": {
-				"exist": false,
-				"link": "#",
-				"tab": false
-			}
-		},
-		{
-			"name": "short url Project",
-			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus.    ",
-			"last-commit": "January 6, 2021",
-			"progress": "prod",
-			"git": {
-				"exist": true,
-				"link": "https://github.com/amaaan2906/url"
-			},
-			"demo": {
-				"exist": false,
-				"link": "/project/url",
 				"tab": false
 			}
 		},
@@ -118,21 +135,6 @@
 				"exist": false,
 				"link": "#",
 				"tab": false
-			}
-		},
-		{
-			"name": "MapPic",
-			"description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias consequatur ullam culpa, est in excepturi deleniti eaque? Temporibus, quos voluptatibus.    ",
-			"last-commit": "March 10, 2020",
-			"progress": "dep",
-			"git": {
-				"exist": true,
-				"link": "https://github.com/PersoSirEduard/Mapic-no-credentials"
-			},
-			"demo": {
-				"exist": false,
-				"link": "https://github.com/PersoSirEduard/Mapic-no-credentials",
-				"tab": true
 			}
 		}
 	]

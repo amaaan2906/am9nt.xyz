@@ -229,6 +229,35 @@ body {
 			}
 		}
 
+		.key {
+			width: 100%;
+			height: auto;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			// position: relative;
+			span {
+				font-size: 0.75rem;
+				&::before {
+					content: "\2022";
+					font-size: 0.95rem;
+					margin-right: 0.5rem;
+				}
+				&.plan::before {
+					color: coral;
+				}
+				&.dev::before {
+					color: CornflowerBlue;
+				}
+				&.prod::before {
+					color: darkseagreen;
+				}
+				&.dep::before {
+					color: crimson;
+				}
+			}
+		}
+
 		.project {
 			.p-head {
 				display: flex;
