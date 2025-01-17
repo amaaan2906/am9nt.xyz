@@ -12,13 +12,78 @@
 			"exist": "boolean value if exists",
 			"link": "link if exists",
 			"tab": "boolean value if demo is deployed separate"
-		}
+		},
+		"tech": ["frameworks", "and", "languages", "used"]
 	},
 	"projects": [
 		{
+			"name": "Sudoku",
+			"description": "Creating a Sudoku app to enhance users’ puzzle-solving skills. The backend features a REST API that generates unique Sudoku boards and provides a solver. The mobile app, currently in development, includes planned features such as daily challenges, progress tracking, and cloud synchronization through user authentication.",
+			"last-commit": "",
+			"progress": "dev",
+			"git": {
+				"exist": true,
+				"link": "https://github.com/amaaan2906/sudoku"
+			},
+			"demo": {
+				"exist": false,
+				"link": "#",
+				"tab": false
+			},
+			"tech": ["typescript", "bun", "hono", "mongodb", "swiftui"]
+		},
+		{
+			"name": "Short URL Generator (4yd.to)",
+			"description": "Designed a lightweight Node.js microservice using TypeScript and Express.js to generate compact, shareable URLs. Exposed a public API for generating random short URLs, with ongoing feature development including analytics, custom short URLs, and password protection. Focused on ensuring the service remains reliable, scalable, and efficient for users.",
+			"last-commit": "",
+			"progress": "prod",
+			"git": {
+				"exist": true,
+				"link": "https://github.com/amaaan2906/micro-url"
+			},
+			"demo": {
+				"exist": false,
+				"link": "cloudflare workers + pages",
+				"tab": true
+			},
+			"tech": ["typescript", "node", "express", "mongodb", "vue"]
+		},
+		{
+			"name": "Fuel Economy Tracker",
+			"description": "An application designed to track vehicle fuel consumption and carbon footprint. Key features include multi-vehicle support, interactive data visualizations, receipt storage, and personalized recommendations for improving efficiency.",
+			"last-commit": "",
+			"progress": "dev",
+			"git": {
+				"exist": true,
+				"link": "https://github.com/amaaan2906/fuel"
+			},
+			"demo": {
+				"exist": false,
+				"link": "#",
+				"tab": false
+			},
+			"tech": ["typescript", "bun", "express", "sql", "swiftui"]
+		},
+		{
+			"name": "Aperture",
+			"description": "Inspired by the original Instagram, Aperture focuses on creating a simple and authentic way to share memories with friends and family. The app features a chronological feed of posts from users' followers, prioritizing speed and scalability. The backend is built using Bun, TypeScript, SQLite3, and MongoDB, while the iOS app is developed natively with SwiftUI to ensure a seamless and responsive user experience.",
+			"last-commit": "",
+			"progress": "plan",
+			"git": {
+				"exist": false,
+				"link": "https://github.com/amaaan2906/"
+			},
+			"demo": {
+				"exist": false,
+				"link": "#",
+				"tab": false
+			},
+			"tech": ["typescript", "bun", "hono", "mongodb", "sqlite", "swiftui"]
+		},
+		{
 			"name": "JWT Authentication Service",
-			"description": "Deployed a Node.js server that utilizes JSON Web Tokens to handle the creation, validation, and decoding of secure, self-contained tokens that are used for authentication and authorization. The microservice uses safety measures to defend against common security threats and data validation to ensure that only valid data is accepted and processed. It functions as a reliable and secure authentication system that can be easily integrated into other web applications or APIs.",
-			"last-commit": "January 12, 2023",
+			"description": "Developed a secure Node.js microservice leveraging JSON Web Tokens (JWT) for authentication and authorization. Implemented robust measures to mitigate common security threats and ensure strict data validation. Designed for reliability and ease of integration, the service supports secure token creation, validation, and decoding for seamless integration with web applications.",
+			"last-commit": "",
 			"progress": "prod",
 			"git": {
 				"exist": true,
@@ -28,27 +93,29 @@
 				"exist": false,
 				"link": "#",
 				"tab": false
-			}
+			},
+			"tech": ["javascript", "node", "express", "mongodb"]
 		},
 		{
-			"name": "URL shortener",
-			"description": "A lightweight, isolated Node.js microservice built using TypeScript and the Express.js framework that generates short and neat URLs. The service is available to the public via an API to generate random short URLs and is continually being updated to add new features like analytics, user-defined short URLs, password-protected short URLs, etc. while also making sure it continues to be reliable, scalable and effective for its users.",
-			"last-commit": "January 24, 2023",
-			"progress": "prod",
+			"name": "Huffman Compressor",
+			"description": "",
+			"last-commit": "",
+			"progress": "dev",
 			"git": {
-				"exist": true,
-				"link": "https://github.com/amaaan2906/micro-url"
+				"exist": false,
+				"link": "https://github.com/amaaan2906/huffman"
 			},
 			"demo": {
 				"exist": false,
-				"link": "https://micro-url.onrender.com/",
-				"tab": true
-			}
+				"link": "#",
+				"tab": false
+			},
+			"tech": ["python"]
 		},
 		{
-			"name": "GPU Price Scrapper",
-			"description": "A CRON job that is scheduled to run on a Node.js server on a daily basis at fixed time. The job fetches GPU prices from popular retailer online stores and saves them to a MySQL database. The database is controlled using Prisma ORM. The script also makes use of libraries such as node-html-parser and axios to retrieve and parse the scraped data. It also incorporates error handling mechanisms, logging, and monitoring to ensure that everything runs seamlessly and without disruptions. It was designed to retrieve the latest prices on a daily basis, making it useful for monitoring and analyzing price trends, and making informed purchasing decisions.",
-			"last-commit": "January 25, 2023",
+			"name": "Price Monitor Service",
+			"description": "Implemented a daily CRON job on a Node.js server to fetch and store prices from popular online retailers in a MySQL database managed with Prisma ORM. Utilized libraries like node-html-parser and axios for data retrieval and parsing, with robust error handling, logging, and monitoring to ensure reliability. Designed to track daily price updates, providing insights for trend analysis and informed purchasing decisions.",
+			"last-commit": "",
 			"progress": "dev",
 			"git": {
 				"exist": true,
@@ -58,13 +125,14 @@
 				"exist": false,
 				"link": "#",
 				"tab": false
-			}
+			},
+			"tech": ["javascript", "prisma orm", "mysql"]
 		},
 		{
 			"name": "Hospital database management system",
-			"description": "As part of a course, I built a PHP web application that connected to a MySQL database. The app was designed to manage and visualise data about hospitals, doctors, patients, and their relationships. The application has a user-friendly interface that allows users to easily view and manage data. This project provided me with a fantastic opportunity to put my PHP and MySQL skills to use and create a real-world application.",
+			"description": "Developed a PHP web application connected to a MySQL database to efficiently manage and visualize hospital-related data, including hospitals, doctors, patients, and their relationships. Designed a user-friendly interface to simplify data viewing and management. This project demonstrated practical application of PHP and MySQL skills to solve real-world data management challenges.",
 			"last-commit": "November 27, 2022",
-			"progress": "prod",
+			"progress": "dep",
 			"git": {
 				"exist": true,
 				"link": "https://github.com/amaaan2906/php-hospital-dbm"
@@ -73,26 +141,12 @@
 				"exist": false,
 				"link": "#",
 				"tab": false
-			}
-		},
-		{
-			"name": "Aperture",
-			"description": "Full-stack photo sharing platform to-be developed using Deno. Will initially serve as a learning experience into Deno and Fresh frameworks but will evolve to be a standalone full-stack application",
-			"last-commit": "",
-			"progress": "plan",
-			"git": {
-				"exist": false,
-				"link": "https://github.com/amaaan2906/jwt-auth"
 			},
-			"demo": {
-				"exist": false,
-				"link": "#",
-				"tab": false
-			}
+			"tech": ["php", "sql", "mysql", "html", "css"]
 		},
 		{
 			"name": "MapPic",
-			"description": "At a hackathon, I was part of a team that created a MEVN stack web application that allows users to find and mark new locations for photographic spots around town, leveraging Google Cloud Vision API for image recognition and tagging and Vue.js for a modular front-end design, resulting in a user-friendly and efficient tool.",
+			"description": "Collaborated in a hackathon to develop a MEVN stack web application enabling users to discover and mark photographic spots in their area. Integrated Google Cloud Vision API for image recognition and automated tagging, while leveraging Vue.js for a modular and intuitive front-end interface. Delivered a user-friendly tool optimized for photographers and enthusiasts to explore and share scenic locations.",
 			"last-commit": "March 10, 2020",
 			"progress": "dep",
 			"git": {
@@ -103,7 +157,8 @@
 				"exist": false,
 				"link": "https://github.com/PersoSirEduard/Mapic-no-credentials",
 				"tab": true
-			}
+			},
+			"tech": ["javascript", "express", "node", "vue", "gcp"]
 		}
 	],
 	"extra": [
