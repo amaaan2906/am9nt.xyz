@@ -7,23 +7,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>am9nt</title>
   <link rel="stylesheet/less" type="text/css" href="style.less" />
-  <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/4.2.1/less.min.js"
+    integrity="sha512-Sd9bkuRWrLvdJvYFD2hGxUatm0HxJy8At4kbkCgr+u4BOz35aZBlGuUrRsx13cRGKWdt8QmoJEfTlxqy9Vv4Vw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<body class="light">
-  <main id="layout-1">
-    <div class="title">Aman Tawakley</div>
-    <nav class="links">
-      <a href="/about">About</a>
-      <a href="/projects">Projects</a>
-    </nav>
+<body class="dark">
+  <main class="home">
+    <div class="top prevent-select">
+      <button onclick="toggleTheme()" class="theme-toggle">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="theme-toggle__icon light">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="theme-toggle__icon dark">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </button>
+      <div class="short-name">am9nt</div>
+    </div>
+    <div class="menu prevent-select">
+      <ul>
+        <li>home</li>
+        <li><a href="">projects</a></li>
+        <li><a href="">about me</a></li>
+        <li><a href="">contact</a></li>
+      </ul>
+    </div>
+    <div class="name">
+      <span class="first">Aman</span>
+      <span class="last">Tawakley</span>
+    </div>
   </main>
-  <footer>&copy; 2021-<span id="year"></span> Aman Tawakley
-    <br>
-    <em>There is nothing impossible to they who will try.</em>
-  </footer>
-  <script>
-    document.getElementById("year").innerHTML = new Date().getFullYear();
+  <script defer>
+    console.log('running theme')
+    if (localStorage.getItem("am9nt-theme") != 'dark') toggleTheme()
+    // document.getElementById("year").innerHTML = new Date().getFullYear();
+    const toggleTheme = () => {
+      let cl = document.querySelector('body').classList
+      if (cl.contains('dark')) {
+        cl.remove('dark')
+        cl.add('light')
+        localStorage.setItem('am9nt-theme', 'light')
+      } else {
+        cl.remove('light')
+        cl.add('dark')
+        localStorage.setItem('am9nt-theme', 'dark')
+      }
+    }
   </script>
 </body>
 
